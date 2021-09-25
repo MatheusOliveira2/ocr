@@ -5,8 +5,6 @@ import matplotlib.pyplot as plt
 from PIL import Image as im
 from scipy.ndimage import interpolation as inter
 
-
-
 #import image
 image = cv2.imread('exemplos/exemplo8.jpeg')
 image = cv2.resize(image,(1024,1048))
