@@ -3,12 +3,11 @@ import numpy as np
 import sys
 import matplotlib.pyplot as plt
 from PIL import Image as im
-from scipy.ndimage import interpolation as inter
 
 
 
 #import image
-image = cv2.imread('exemplos/exemplo8.jpeg')
+image = cv2.imread('exemplos/exemplo9.jpeg')
 image = cv2.resize(image,(1024,1048))
 cv2.imshow('orig',image)
 # cv2.waitKey(0)
@@ -28,7 +27,7 @@ gray = cv2.cvtColor(dst,cv2.COLOR_BGR2GRAY)
 
 threshDST = cv2.adaptiveThreshold(grayDST,255,cv2.ADAPTIVE_THRESH_GAUSSIAN_C,cv2.THRESH_BINARY,11,6) #imgf contains Binary image
 cv2.imshow('threshDST',threshDST)
-
+cv2.imwrite('exemplo9.jpg',threshDST)
 # img = cv2.imread('j.png',0)
 # kernel = np.ones((1,1),np.uint8)
 # erosion = cv2.erode(threshDST,kernel,iterations = 1)
