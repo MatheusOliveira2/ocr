@@ -63,15 +63,13 @@ def find_line(image,array):
         for j in range(width):
             imageColor[lines[i],j] = [0,0,255,40]
 
-    cv2.imshow("lines", imageColor)
-    cv2.waitKey()
-    cv2.destroyAllWindows()
+    return imageColor
 
 
-image = cv2.imread('exemplo9.jpeg', 0)
-image = cv2.bitwise_not(image)
-kernel = np.ones((2,2), np.uint8)
-image = cv2.dilate(image, kernel, iterations=1)
+image = cv2.imread('skew_corrected.png', 0)
+# image = cv2.bitwise_not(image)
+# kernel = np.ones((2,2), np.uint8)
+# image = cv2.dilate(image, kernel, iterations=1)
 image = cv2.bitwise_not(image)
 line_segmentation(image)
 

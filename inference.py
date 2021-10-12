@@ -7,8 +7,8 @@ import tensorflow as tf
 import math
 from tensorflow.keras.models import load_model
 
-model_dir = '/Users/CromAI/Documents/ocr/ocr/models/segmentador-epoch=17-acc=0.883-val_acc=0.875.model'
-image_path = '/Users/CromAI/Documents/ocr/ocr/exemplos/exemplo5.jpeg'
+model_dir = "models\segmentador-epoch=17-acc=0.883-val_acc=0.875.model"
+image_path = "exemplos\exemplo5.jpeg"
 filename = image_path.split('/')[-1]
 size = 100
 model = load_model(model_dir)
