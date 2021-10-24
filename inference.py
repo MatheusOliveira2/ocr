@@ -8,10 +8,12 @@ model_dir = '/Users/CromAI/Documents/ocr/ocr/models/segmentador-epoch=47-acc=0.1
 #image_path = '/Users/CromAI/Documents/ocr/ocr/exemplos/recortes_e_filtros/exemplo16.jpeg'
 list = os.listdir('/Users/CromAI/Documents/ocr/teste')
 
+
 def do_inferece(image_path, model_dir):
     filename = image_path.split('/')[-1]
     size = 100
     model = load_model(model_dir)
+
 
     img = cv2.imread(image_path)     
     altura = img.shape[0]
